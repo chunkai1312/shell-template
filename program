@@ -16,25 +16,25 @@ usage () {
 }
 
 print () {
-	echo 'Hello World!'
+  echo 'Hello World!'
 }
 
 # process command line options
 
 while [[ -n $1 ]]; do
-	case $1 in
+  case $1 in
     -h | --help)    usage
                     exit
                     ;;
     -v | --version)	echo $VERSION
                     exit
                     ;;
-		-p | --print)   print
+    -p | --print)   print
                     exit
                     ;;
-		*)              usage >&2
+    *)              usage >&2
                     exit 1
                     ;;
-	esac
-	shift
+  esac
+  shift
 done
