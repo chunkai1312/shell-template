@@ -23,18 +23,18 @@ print () {
 
 while [[ -n $1 ]]; do
   case $1 in
-    -h | --help)    usage
-                    exit
-                    ;;
-    -v | --version)	echo $VERSION
-                    exit
-                    ;;
-    -p | --print)   print
-                    exit
-                    ;;
-    *)              usage >&2
-                    exit 1
-                    ;;
+    -h | --help)      usage
+                      exit
+                      ;;
+    -v | --version)   echo $VERSION
+                      exit
+                      ;;
+    -p | --print)     print
+                      exit
+                      ;;
+    *)                usage >&2
+                      exit 1
+                      ;;
   esac
   shift
 done
